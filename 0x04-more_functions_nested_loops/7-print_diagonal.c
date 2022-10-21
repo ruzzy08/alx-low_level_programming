@@ -1,22 +1,24 @@
 #include "main.h"
 
 /**
- * print_square - Prints a squareusing the character #.
- * @size: The size of the square.
+ * print_diagonal - Draws a diagonal line using the \ character.
+ * @n: The number of \ characters to be printed.
  */
-void print_square(int size)
+void print_diagonal(int n)
 {
-	int hgt, wid;
+	int len, space;
 
-	if (size > 0)
+	if (n > 0)
 	{
-		for (hgt = 0; hgt < size; hgt++)
+		for (len = 0; len < n; len++)
 		{
-			for (wid = 0; wid < size; wid++)
-				_putchar('#');
+			for (space = 0; space < len; space++)
+				_putchar(' ');
+			_putchar('\\');
 
-			if (hgt == size - 1)
+			if (len == n - 1)
 				continue;
+
 			_putchar('\n');
 		}
 	}
